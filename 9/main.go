@@ -2,10 +2,7 @@ package main
 
 import (
 	"fmt"
-	"sync"
 )
-
-var wg sync.WaitGroup
 
 func main() {
 	slice := []int{2, 4, 6, 8, 10}
@@ -13,9 +10,7 @@ func main() {
 	wchan := make(chan int)
 	rchan := make(chan int)
 
-	wg.Add(1)
 	go write(slice, wchan)
-	wg.Add(1)
 	go read(rchan, wchan)
 
 	for v := range rchan {
