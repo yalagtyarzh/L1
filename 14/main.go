@@ -11,6 +11,7 @@ func main() {
 	fmt.Println(t)
 }
 
+// checkType возвращает тип val
 func checkType(val interface{}) reflect.Type {
 	return reflect.TypeOf(val)
 }

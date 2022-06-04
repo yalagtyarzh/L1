@@ -10,9 +10,12 @@ func main() {
 	fmt.Println(res)
 }
 
+// groupNums группирует числа, хранящийся в nums и возвращает мапу, значения которого
+// являются числами, принадлежащей группе
 func groupNums(nums []float64) map[int][]float64 {
 	res := make(map[int][]float64)
 	for _, v := range nums {
+		// Получаем ключ, в котором будет храниться массив и добавляем туда элемент v
 		idx := int(v/10) * 10
 		res[idx] = append(res[idx], v)
 	}

@@ -15,6 +15,7 @@ func main() {
 	fmt.Println(slice)
 }
 
+// remove удаляет элемент из слайса и возвращает новый слайс с удаленным элементом
 func remove(s []int, i int) ([]int, error) {
 	if i < 0 || i >= len(s) {
 		return nil, fmt.Errorf("invalid index")

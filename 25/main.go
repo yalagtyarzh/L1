@@ -5,7 +5,9 @@ import (
 	"time"
 )
 
+// sleep останавливает выполнение на d времени
 func sleep(d time.Duration) {
+	// Блокируемся на d секунд, а позже продолжаем выполнение
 	<-time.After(d)
 }
 
